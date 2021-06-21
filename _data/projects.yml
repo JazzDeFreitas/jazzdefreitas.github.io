@@ -1,0 +1,31 @@
+- title: SongDaily
+  body: >
+    This is a daily music recommendation app that I wrote in Flutter
+    for Android and iOS. It finds a new song every day based on the user's
+    genre choices and notifies them when their song is ready.
+  image: TODO
+  buttons: TODO
+
+- title: Stock Market Alert Platform
+  body: >
+    I wrote this app using Django for my Distributed computing course in college.
+    It is a stock market website that allows users to
+  image: TODO
+  buttons: TODO
+
+- title: K-means Iris Classification
+  body: >
+    This is a program that uses a k-means clustering
+    algorithm to classify different species of Iris plants.
+    I made this for my artificial intelligence course in college.
+  image: k-means.png
+  buttons: <a href="https://github.com/JazzDeFreitas/k-means-iris-classification" target="_blank" class="btn btn-outline-primary">View on GitHub</a>
+# songdaily
+# DISTCOMPSTOCKS
+# education software
+# nge options/banks
+# arklitemusic
+# java-to-python
+# k-means
+# msp430 piano
+# games
