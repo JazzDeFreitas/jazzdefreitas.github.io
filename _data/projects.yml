@@ -52,6 +52,9 @@
     A Python application that attempts to translate Java code into Python code. It can handle basic programs.
     This was written as part of a team for my Senior Project course in college.
   image: java2python.png
+  buttons:
+    - text: View Site
+      href: https://java2python.pythonanywhere.com/
 
 - title: K-means Iris Classification
   body: >

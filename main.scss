@@ -33,72 +33,73 @@ $font-size-base: 1.2rem;
 $h2-font-size: 3rem;
 $h3-font-size: 2rem;
 
-// $border-radius: 2rem;
-// $navbar-toggler-border-radius: 2rem;
-// $nav-pills-link-active-color: #fff;
-// $navbar-dark-toggler-border-color:  #ffffffaa;
-
 html {
     scroll-behavior: smooth;
-}
-
-#home noscript {
-    position: absolute;
-    text-align: center;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-    width: 100%;
 }
 
 #home {
     height: 100vh;
     min-height: 400px;
-    position: relative;
     background: url("img/bg.png") repeat center center;
 
-    .btn {
-        padding: 10px 20px;
-        font-size: 1.5rem;
-    }
+    #home-from-left {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
 
-    #arrow-btn {
-        transform: translate(-50%, -50%);
-        position: absolute;
-        padding: 10px 15px;
-        left: 50%;
-        top: 92%;
-    }
-
-    :not(noscript) {
         .btn {
+            padding: 10px 20px;
+            font-size: 1.5rem;
+        }
+
+        #arrow-btn {
+            transform: translate(-50%, -50%);
             position: absolute;
-            transform: translate(0, -50%);
+            padding: 10px 15px;
+            left: 50%;
+            top: 92%;
         }
 
-        #linkedin-btn {
-            right: calc(50% + 50px);
-        }
-        #github-btn {
-            left: calc(50% + 50px);
-        }
-        @media only screen and (max-width: 400px) {
-            #linkedin-btn {
-                right: calc(50% - 2px);
-            }
-            #github-btn {
-                left: calc(50% + 12px);
-            }
+        noscript {
+            position: absolute;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+            width: 100%;
         }
 
-        @media only screen and (max-width: 300px) {
+        :not(noscript) {
+            .btn {
+                position: absolute;
+                transform: translate(0, -50%);
+            }
+
             #linkedin-btn {
-                right: calc(50%);
-                transform: translate(50%, -50%);
+                right: calc(50% + 50px);
             }
             #github-btn {
-                left: calc(50%);
-                transform: translate(-50%, -50%);
+                left: calc(50% + 50px);
+            }
+            @media only screen and (max-width: 400px) {
+                #linkedin-btn {
+                    right: calc(50% - 2px);
+                }
+                #github-btn {
+                    left: calc(50% + 12px);
+                }
+            }
+
+            @media only screen and (max-width: 300px) {
+                #linkedin-btn {
+                    right: calc(50%);
+                    transform: translate(50%, -50%);
+                }
+                #github-btn {
+                    left: calc(50%);
+                    transform: translate(-50%, -50%);
+                }
             }
         }
     }
@@ -180,6 +181,7 @@ html {
 }
 .fade-in {
     animation: fade-in-frames 0.8s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes from-left-frames {
@@ -194,6 +196,7 @@ html {
 }
 .from-left {
     animation: from-left-frames 0.8s;
+    animation-fill-mode: forwards;
     position: relative;
 }
 

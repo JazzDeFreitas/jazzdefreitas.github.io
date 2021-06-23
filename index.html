@@ -20,22 +20,24 @@
 <body>
     <!-- home -->
     <div id="home" class="container-fluid p-0">
-        <noscript class="fade-in">
-            <h1 style="font-size: calc(2.5rem + 5vw)">
-                Jazz DeFreitas
-            </h1>
-            <h2 style="font-size: calc(1rem + 2vw);" class="mb-3">
-                Full Stack Web + Mobile Software Developer
-            </h2>
-            <a href="https://www.linkedin.com/in/jazzdefreitas" target="_blank" class="btn btn-outline-primary">LinkedIn</a>
-            <a href="https://github.com/jazzdefreitas" target="_blank" class="btn btn-outline-primary">GitHub</a>
-        </noscript>
-        <div class="fade-in js-only">
-            <canvas id="matter-canvas"></canvas>
-            <a id="linkedin-btn" href="https://www.linkedin.com/in/jazzdefreitas" target="_blank" class="btn btn-outline-primary">LinkedIn</a>
-            <a id="github-btn" href="https://github.com/jazzdefreitas" target="_blank" class="btn btn-outline-primary">GitHub</a>
+        <div id="home-from-left" class="from-left">
+            <noscript>
+                <h1 style="font-size: calc(2.5rem + 5vw)">
+                    Jazz DeFreitas
+                </h1>
+                <h2 style="font-size: calc(1rem + 2vw);" class="mb-3">
+                    Full Stack Web + Mobile Software Developer
+                </h2>
+                <a href="https://www.linkedin.com/in/jazzdefreitas" target="_blank" class="btn btn-outline-primary">LinkedIn</a>
+                <a href="https://github.com/jazzdefreitas" target="_blank" class="btn btn-outline-primary">GitHub</a>
+            </noscript>
+            <div class="js-only">
+                <canvas id="matter-canvas"></canvas>
+                <a id="linkedin-btn" href="https://www.linkedin.com/in/jazzdefreitas" target="_blank" class="btn btn-outline-primary">LinkedIn</a>
+                <a id="github-btn" href="https://github.com/jazzdefreitas" target="_blank" class="btn btn-outline-primary">GitHub</a>
+            </div>
+            <a id="arrow-btn" href="#about" class="btn btn-outline-primary">&#9660;</a>
         </div>
-        <a id="arrow-btn" href="#about" class="fade-in btn btn-outline-primary">&#9660;</a>
     </div>
 
     <!-- about -->
@@ -53,7 +55,7 @@
     <!-- work -->
     <div id="work" class="container">
         <h2 class="text-center from-left">My Work</h2>
-        <h3 class="from-left text-center">Projects</h3>
+        <h3 class="text-center from-left">Projects</h3>
         {% for project in site.data.projects %}
         <div class="work-row row mb-4 from-left">
             <div class="col-12 col-md-6 col-lg-4 text-center align-middle">
@@ -86,8 +88,8 @@
                 </p>
             </div>
         </div>
-        <div class="row from-left">
-            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+        <div class="row">
+            <div class="from-left col-lg-4 col-md-6 col-sm-12 text-center">
                 <a href="https://jazzdgames.itch.io/melody-shuffle" target="_blank">
                     <img src="img/games/melodyshuffle.png" class="game">
                     <div class="gametext">
@@ -95,7 +97,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+            <div class="from-left col-lg-4 col-md-6 col-sm-12 text-center">
                 <a href="https://jazzdgames.itch.io/rhythm-rebuild" target="_blank">
                     <img src="img/games/rhythmrebuild.png" class="game">
                     <div class="gametext">
@@ -103,7 +105,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-md-12 col-sm-12 text-center">
+            <div class="from-left col-lg-4 col-md-12 col-sm-12 text-center">
                 <a href="https://jazzdgames.itch.io/foxbot" target="_blank">
                     <img src="img/games/foxbot.png" class="game">
                     <div class="gametext">
@@ -177,11 +179,17 @@
         }
 
         function checkScroll() {
+            var sameIndex = 0;
             for (var i = 0; i < fromLeftElements.length; i++) {
                 var element = fromLeftElements[i];
-                if (element.getBoundingClientRect().top - window.innerHeight < -100) {
+                var top = element.getBoundingClientRect().top;
+                if (top - window.innerHeight < -100 && element.classList.contains('hidden')) {
+                    element.style.opacity = '0';
+                    element.style.animationDelay = (sameIndex * 50) + 'ms';
                     element.classList.remove('hidden');
                     element.classList.add('from-left');
+                    if (top > 0)
+                        sameIndex++;
                 }
             }
         }

@@ -190,7 +190,7 @@ function startMatter() {
             });
             particle.jumps = 0;
             particles.push(particle);
-            Events.on(particle, 'sleepStart', function (event) {
+            Events.on(particle, 'sleepStart', function () {
                 particle.jumps++;
                 Sleeping.set(particle, false)
                 Body.applyForce(particle, particle.position, {
@@ -202,7 +202,7 @@ function startMatter() {
         }
     }, 500);
 
-    Events.on(engine, 'beforeUpdate', function (event) {
+    Events.on(engine, 'beforeUpdate', function () {
         for (var i = 0; i < particles.length; i++) {
             if (particles[i].position.y > canvas.height * .6 || particles[i].jumps > 5) {
                 World.remove(engine.world, particles.splice(i, 1)[0]);
@@ -217,5 +217,4 @@ function startMatter() {
     World.add(engine.world, [name1, name2, name3]);
     Engine.run(engine);
     Render.run(render);
-
 }
