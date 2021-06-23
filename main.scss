@@ -6,16 +6,16 @@
 @import "mixins/_breakpoints";
 
 @font-face {
-    font-family: 'comfortaa';
-    src: url('font/comfortaa-regular-webfont.woff2') format('woff2'),
-        url('font/comfortaa-regular-webfont.woff') format('woff');
+    font-family: "comfortaa";
+    src: url("font/comfortaa-regular-webfont.woff2") format("woff2"),
+        url("font/comfortaa-regular-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 $theme-colors: (
-    // "primary": #4AC95B,
-    "primary": #43A3F2,
+    "primary": #43a3f2,
+    "grey": #696985,
     "dark": #252533,
     "darker": #1c1c26,
     "darkest": #151519,
@@ -25,31 +25,101 @@ $body-bg: theme-color("darker");
 $link-color: theme-color("primary");
 $btn-border-radius: 100px;
 $btn-border-width: 2px;
-$body-color:#fff;
+$body-color: #fff;
 $font-family-base: comfortaa, sans-serif;
 $font-size-base: 1.2rem;
 
+// $h1-font-size: 8rem;
 $h2-font-size: 3rem;
 $h3-font-size: 2rem;
+
 // $border-radius: 2rem;
 // $navbar-toggler-border-radius: 2rem;
 // $nav-pills-link-active-color: #fff;
 // $navbar-dark-toggler-border-color:  #ffffffaa;
 
-// $font-size-base: 1.2rem;
-// $h1-font-size: 8rem;
-// $h2-font-size: 3rem;
-// $h3-font-size: 2.2rem;
-
-
-
 html {
     scroll-behavior: smooth;
 }
 
+#home noscript {
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 100%;
+}
+
+#home {
+    height: 100vh;
+    min-height: 400px;
+    position: relative;
+    background: url("img/bg.png") repeat center center;
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1.5rem;
+    }
+
+    #arrow-btn {
+        transform: translate(-50%, -50%);
+        position: absolute;
+        padding: 10px 15px;
+        left: 50%;
+        top: 92%;
+    }
+
+    :not(noscript) {
+        .btn {
+            position: absolute;
+            transform: translate(0, -50%);
+        }
+
+        #linkedin-btn {
+            right: calc(50% + 50px);
+        }
+        #github-btn {
+            left: calc(50% + 50px);
+        }
+        @media only screen and (max-width: 400px) {
+            #linkedin-btn {
+                right: calc(50% - 2px);
+            }
+            #github-btn {
+                left: calc(50% + 12px);
+            }
+        }
+
+        @media only screen and (max-width: 300px) {
+            #linkedin-btn {
+                right: calc(50%);
+                transform: translate(50%, -50%);
+            }
+            #github-btn {
+                left: calc(50%);
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
 #matter-canvas {
-    position: absolute; 
-    width: 100%; 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#bandcamp-div {
+    display: inline-block;
+    width: 100%;
+    max-width: 700px;
+    height: 120px;
+}
+
+#bandcamp {
+    border: 0;
+    width: 100%;
     height: 100%;
 }
 
@@ -57,19 +127,8 @@ html {
     padding: 40px;
 }
 
-
-.skill-big, .skill-small {
-    p {
-        word-break: break-all;
-    }
-}
-
-@include media-breakpoint-up(lg) { 
-    .skill-big, .skill-small {
-        p {
-            word-break: normal;
-        }
-    }
+.hidden {
+    opacity: 0;
 }
 
 .game {
@@ -77,113 +136,65 @@ html {
     max-width: 80vw;
 }
 
+.work-row {
+    display: flex;
+    align-items: center;
+}
 
-.skill-big {
-    img {
-        width: 60%;
-        margin-bottom: 20px;
+.work-img {
+    width: 300px;
+    max-width: 80vw;
+    max-height: 250px;
+    object-fit: contain;
+}
+
+.skill-big,
+.skill-small p {
+    word-break: break-all;
+}
+
+@include media-breakpoint-up(lg) {
+    .skill-big,
+    .skill-small p {
+        word-break: normal;
     }
 }
 
-.skill-small {
-    img {
-        width: 70%;
-        margin-bottom: 10px;
-    }
+.skill-big img {
+    width: 60%;
+    margin-bottom: 20px;
 }
 
-
-#home {
-    height: 100vh;
-    min-height: 600px;
-    position: relative;
-    background: url('img/bg.png') repeat center center;
-
-    .btn {
-        position: absolute;
-        transform: translate(-50%, 0);
-        font-size: 1.5rem;
-    }
-    #linkedin-btn {
-        padding: 10px 20px;
-        left: calc(50% - 100px);
-        bottom: 16%;
-    }
-    #github-btn {
-        padding: 10px 20px;
-        left: calc(50% + 100px);
-        bottom: 16%;
-    }
-    #arrow-btn {
-        padding: 10px 30px;
-        left: 50%;
-        bottom: 4%;
-    }
+.skill-small img {
+    width: 70%;
+    margin-bottom: 10px;
 }
 
 @keyframes fade-in-frames {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 .fade-in {
-    animation: fade-in-frames .8s;
+    animation: fade-in-frames 0.8s;
 }
 
 @keyframes from-left-frames {
-    from { opacity: 0; right: 80px; }
-    to { opacity: 1; right: 0px; }
+    from {
+        opacity: 0;
+        right: 80px;
+    }
+    to {
+        opacity: 1;
+        right: 0px;
+    }
 }
 .from-left {
-    animation: from-left-frames .8s;
+    animation: from-left-frames 0.8s;
     position: relative;
 }
 
-// .hidden {
-//     opacity: 0;
-// }
-// .hiddenaftercanvas {
-//     opacity: 0;
-// }
-// .container {
-//     padding-top: 4rem;
-//     padding-bottom: 4rem;
-// }
-// .skill {
-//     width: 8rem;
-//     max-width: 40vw;
-// }
-// .skills p {
-//     padding-top: .8rem;
-// }
-
-
-// .darkrow {
-//     background-color: #242C33;
-//     color: #fbfbfb;
-//     p {
-//         color: #aaa;
-//     }
-// }
-
-// .lightrow {
-//     background-color: #fbfbfb;
-//     color: #242C33;
-// }
-// .gametext {
-//     padding-top: .8rem;
-// }
-
-// .mainBtn button {
-//     position: absolute; 
-//     height: 60px;
-//     width: 60px;
-//     text-align: center;
-//     padding: 0;
-//     transform: translate(-50%, -50%);
-// }
-
-// h4 {
-//     color: #ccc;
-// }
-
-@import "bootstrap"
+@import "bootstrap";
