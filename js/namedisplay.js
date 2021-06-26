@@ -183,22 +183,28 @@ function startMatter() {
     setInterval(function () {
         if (!document.hidden) {
             var iconNum = Math.floor(Math.random() * 20);
-            var particle = Bodies.circle(canvas.width * Math.random() - (canvas.width / 2), -(canvas.height * .7), 50, {
-                restitution: 1,
-                sleepThreshold: 10,
-                render: { sprite: { texture: 'img/icons/' + iconNum + '.png' } }
-            });
-            particle.jumps = 0;
-            particles.push(particle);
-            Events.on(particle, 'sleepStart', function () {
-                particle.jumps++;
-                Sleeping.set(particle, false)
-                Body.applyForce(particle, particle.position, {
-                    x: Math.random() - .5,
-                    y: -.5,
-                });
-            });
-            World.add(engine.world, particle);
+            // try loading image
+            loadImage(
+                'img/icons/' + iconNum + '.png',
+                function (src) {
+                    var particle = Bodies.circle(canvas.width * Math.random() - (canvas.width / 2), -(canvas.height * .7), 50, {
+                        restitution: 1,
+                        sleepThreshold: 10,
+                        render: { sprite: { texture: src } }
+                    });
+                    particle.jumps = 0;
+                    particles.push(particle);
+                    Events.on(particle, 'sleepStart', function () {
+                        particle.jumps++;
+                        Sleeping.set(particle, false)
+                        Body.applyForce(particle, particle.position, {
+                            x: Math.random() - .5,
+                            y: -.5,
+                        });
+                    });
+                    World.add(engine.world, particle);
+                }
+            );
         }
     }, 500);
 
@@ -218,3 +224,10 @@ function startMatter() {
     Engine.run(engine);
     Render.run(render);
 }
+
+function loadImage(src, onSuccess, onError) {
+    const img = new Image();
+    img.onload = function () { onSuccess(img.src) };
+    img.onerror = onError;
+    img.src = src;
+};
