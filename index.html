@@ -21,7 +21,7 @@
     <!-- home -->
     <div id="home" class="container-fluid p-0">
         <div id="home-from-left" class="from-left">
-            <noscript>
+            <noscript id="main-noscript">
                 <h1 style="font-size: calc(2.5rem + 5vw)">
                     Jazz DeFreitas
                 </h1>
@@ -31,12 +31,16 @@
                 <a href="https://www.linkedin.com/in/jazzdefreitas" target="_blank" class="btn btn-outline-primary">LinkedIn</a>
                 <a href="https://github.com/jazzdefreitas" target="_blank" class="btn btn-outline-primary">GitHub</a>
             </noscript>
+            <noscript>
+                <a id="arrow-btn" href="#about" class="btn btn-outline-primary">&#9660;</a>
+            </noscript>
             <div class="js-only">
                 <canvas id="matter-canvas"></canvas>
                 <a id="linkedin-btn" href="https://www.linkedin.com/in/jazzdefreitas" target="_blank" class="btn btn-outline-primary">LinkedIn</a>
                 <a id="github-btn" href="https://github.com/jazzdefreitas" target="_blank" class="btn btn-outline-primary">GitHub</a>
+                <a id="arrow-btn" onclick="document.getElementById('about').scrollIntoView()" class="btn btn-outline-primary">&#9660;</a>
+
             </div>
-            <a id="arrow-btn" href="#about" class="btn btn-outline-primary">&#9660;</a>
         </div>
     </div>
 

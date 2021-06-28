@@ -5,8 +5,10 @@
     genre choices and notifies them when their song is ready.
   image: songdaily.png
   buttons:
-    -
-    -
+    - text: View on App Store
+      href: https://apps.apple.com/us/app/songdaily/id1572532967
+    - text: View on Google Play Store
+      href: https://play.google.com/store/apps/details?id=com.jazzdgames.songdaily
 
 - title: ASAP Financial Aid Platform
   body: >
