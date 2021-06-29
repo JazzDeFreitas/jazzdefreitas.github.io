@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="en">
 
@@ -5,557 +7,210 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="main.css">
-    <title>Jazz DeFreitas</title>
+    <noscript>
+        <style>
+            .js-only {
+                display: none
+            }
+        </style>
+    </noscript>
+    <title>Jazz DeFreitas | Full Stack Web + Mobile Software Developer</title>
 </head>
 
-<body data-spy="scroll" data-target="#mynavbar" data-offset="110" onload="startMatter()">
+<body>
+    <!-- home -->
+    <div id="home" class="container-fluid p-0">
+        <div id="home-from-left" class="from-left">
+            <noscript id="main-noscript">
+                <h1 style="font-size: calc(2.5rem + 5vw)">
+                    Jazz DeFreitas
+                </h1>
+                <h2 style="font-size: calc(1rem + 2vw);" class="mb-3">
+                    Full Stack Web + Mobile Software Developer
+                </h2>
+                <a href="https://www.linkedin.com/in/jazzdefreitas" target="_blank" class="btn btn-outline-primary">LinkedIn</a>
+                <a href="https://github.com/jazzdefreitas" target="_blank" class="btn btn-outline-primary">GitHub</a>
+            </noscript>
+            <noscript>
+                <a id="arrow-btn" href="#about" class="btn btn-outline-primary">&#9660;</a>
+            </noscript>
+            <div class="js-only">
+                <canvas id="matter-canvas"></canvas>
+                <a id="linkedin-btn" href="https://www.linkedin.com/in/jazzdefreitas" target="_blank" class="btn btn-outline-primary">LinkedIn</a>
+                <a id="github-btn" href="https://github.com/jazzdefreitas" target="_blank" class="btn btn-outline-primary">GitHub</a>
+                <a id="arrow-btn" onclick="document.getElementById('about').scrollIntoView()" class="btn btn-outline-primary">&#9660;</a>
 
-    <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark" id="navbar">
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#mynavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-sm-center" id="mynavbar">
-            <ul class="nav text-center nav-pills">
-                <li class="nav-item">
-                    <a class="nav-link" href="#home">Home</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#work">Work</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="container-fluid p-0" id="home"
-        style="height: 100vh; background: url('img/bg.png') repeat center center;">
-        <div id="noscripts">
-            <h1
-                style="position: absolute; text-align: center; transform: translate(-50%, -50%); left: 50%; top: 45vh; width: 100%; color: #fff; font-size: calc(2.5rem + 5vw);">
-                Jazz DeFreitas
-            </h1>
-            <h2
-                style="position: absolute; text-align: center; transform: translate(-50%, -50%); left: 50%; top: calc(55vh + 20px); width: 100%; color: #fff; font-size: calc(1rem + 2vw);;">
-                Programmer + Web Designer
-            </h2>
-        </div>
-        <canvas class="tohideaftercanvas" id="mattercanvas"
-            style="position: absolute; width: 100%; height: 100%;"></canvas>
-        <div class="tohideaftercanvas mainBtn">
-            <a href="https://www.linkedin.com/in/jazzdefreitas" target="_blank"><button type="button"
-                    class="btn btn-primary linkBtn"
-                    style="left: calc(50% - 75px); font-family: symbols, sans-serif; font-size: 3rem; line-height: 0px; top: 70vh;">1</button></a>
-
-            <a href="https://github.com/jazzdefreitas" target="_blank"><button type="button"
-                    class="btn btn-primary linkBtn"
-                    style="left: calc(50% + 75px); font-family: symbols, sans-serif; font-size: 3rem; line-height: 0px; padding-top: 14px; padding-left: 1px; top: 70vh">2</button></a>
-
-            <a href="#about"><button type="button" class="btn btn-primary"
-                    style="top: 90vh; left: 50%; font-size: 2rem; padding-top: 7px;">&#9660;</button></a>
-        </div>
-    </div>
-
-    <div class="container-fluid darkrow text-light">
-        <div class="container tohide" id="about">
-            <div class="text-center">
-                <h2>About Me</h2>
-            </div>
-            <p>
-                My passion for all things software started from a young age, and has continued to grow to this day.
-                Currently, I am persuing a degree in Computer Science at Kennesaw State University, where I have gained
-                much experience in programming, code analysis, development planning, project management, and more.
-                Thorough and detail-oriented, I am proficient at completing and exceeding project goals, and I am able
-                to adapt to any changes in the development process that may come.
-            </p>
-        </div>
-    </div>
-
-    <div class="container-fluid lightrow">
-        <div class="container tohide skills" id="skills">
-            <div class="text-center">
-                <h2>Skills</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
-                    <img src="img/skills/js.png" class="skill">
-                    <p>JavaScript</p>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
-                    <img src="img/skills/html5.png" class="skill">
-                    <p>HTML5</p>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
-                    <img src="img/skills/css.png" class="skill">
-                    <p>CSS</p>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
-                    <img src="img/skills/java.png" class="skill">
-                    <p>Java</p>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
-                    <img src="img/skills/csharp.png" class="skill">
-                    <p>C#</p>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
-                    <img src="img/skills/cplusplus.png" class="skill">
-                    <p>C++</p>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
-                    <img src="img/skills/cordova.png" class="skill">
-                    <p>Apache Cordova</p>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
-                    <img src="img/skills/phaser.png" class="skill">
-                    <p>Phaser.js</p>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
-                    <img src="img/skills/nodejs.png" class="skill">
-                    <p>Node.js</p>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
-                    <img src="img/skills/git.png" class="skill">
-                    <p>Git</p>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
-                    <img src="img/skills/bootstrap.png" class="skill">
-                    <p>Bootstrap</p>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
-                    <img src="img/skills/sql.png" class="skill">
-                    <p>SQL</p>
-                </div>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid darkrow">
-        <div class="container tohide" id="work">
-            <div class="text-center">
-                <h2>Work</h2>
-            </div>
-            <h3>Projects</h3>
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-8">
-                    <h4>K-means Iris Classification</h4>
-                    <p>
-                        This is a program that uses a k-means clustering algorithm to classify different species of Iris
-                        plants. I made this for my artificial intelligence course in college.
-                    </p>
-                    <a href="https://github.com/JazzDeFreitas/k-means-iris-classification" target="_blank"><button
-                            type="button" class="btn btn-primary">View on
-                            GitHub</button></a>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 text-center">
-                    <img src="img/k-means.png" style="width: 19rem; max-width: 80vw;">
-                </div>
-            </div>
-            <h3>Games</h3>
-            <div class="row">
-                <div class="col-12">
-                    <p>I make games as a hobby. My games are developed with Phaser.js, and I publish them online to
-                        numerous sites.
-                        I ported my latest game, <b>Melody Shuffle</b>, to mobile using Apache Cordova, and published it
-                        on
-                        the
-                        <a href="https://apps.apple.com/us/app/melody-shuffle/id1511349948" target="_blank">App
-                            Store</a> and <a
-                            href="https://play.google.com/store/apps/details?id=com.jazzdgames.melodyshuffle"
-                            target="_blank">Google
-                            Play
-                            Store</a>. My second game, <b>Rhythm Rebuild</b>, was made in 48 hours for the Kennesaw
-                        State
-                        University Global Game Jam in 2020, in which it was awarded third place.
-                    </p>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                    <a href="https://jazzdgames.itch.io/melody-shuffle" target="_blank">
-                        <img src="img/melodyshuffle.png" class="game">
-                        <div class="gametext">
-                            Melody Shuffle - a musical puzzle game
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                    <a href="https://jazzdgames.itch.io/rhythm-rebuild" target="_blank">
-                        <img src="img/rhythmrebuild.png" class="game">
-                        <div class="gametext">
-                            Rhythm Rebuild - a one button rhythm game
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-12 col-sm-12 text-center">
-                    <a href="https://jazzdgames.itch.io/foxbot" target="_blank">
-                        <img src="img/foxbot.png" class="game">
-                        <div class="gametext">
-                            FoxBot - a retro platformer
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div style="text-align: center; width: 100%;">
-                <br>
-                <p>Along with programming and creating sprite art, I also compose music for my games.</p>
-                <div style="display: inline-block; width: 100%; max-width: 700px; height: 120px;">
-                    <iframe id="bandcamp" style="border: 0; width: 100%; height: 100%" seamless><a
-                            href="http://jazzdgames.bandcamp.com/album/foxbot-soundtrack">FoxBot Soundtrack by
-                            jazzD</a></iframe>
-                </div>
-            </div>
-        </div>
+    <!-- about -->
+    <div id="about" class="container">
+        <h2 class="text-center from-left">About Me</h2>
+        <p class="from-left">
+            I'm a software developer from Atlanta, Georgia. My passion for all things digital started from a young age, and
+            continues to grow to this day. I graduated with a degree in <b>Computer Science</b> from Kennesaw State University,
+            where I studied programming, code analysis, development planning, project management, and more. I also have
+            internship experience in <b>full stack web development</b>, as well as <b>cross-platform app development</b>. My
+            coding style is <b>thorough and detail-oriented</b>, and I am able to <b>adapt</b> to any changes in the development process that may come.
+        </p>
+        <div class="text-center from-left"><a href="Jazz_DeFreitas_Resume.pdf" target="_blank" class="btn btn-outline-primary mb-4">View my Resume</a></div>
+
     </div>
 
-    <div class="container-fluid lightrow">
-        <div class="container tohide" id="contact">
-            <div class="text-center">
-                <h2>Contact</h2>
-                <p>
-                    You can contact me by email at <a style="word-break: break-word"
-                        href="mailto:jazzdefreitas@gmail.com">jazzdefreitas@gmail.com</a>,
-                    or message my <a href="https://www.linkedin.com/in/jazzdefreitas" target="_blank">LinkedIn
-                        account</a>.
+    <!-- work -->
+    <div id="work" class="container">
+        <h2 class="text-center from-left">My Work</h2>
+        <h3 class="text-center from-left">Projects</h3>
+        {% for project in site.data.projects %}
+        <div class="work-row row mb-4 from-left">
+            <div class="col-12 col-md-6 col-lg-4 text-center align-middle">
+                <img src="img/work/{{ project.image }}" class="work-img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-8 align-middle">
+                <h4>{{ project.title }}</h4>
+                <p>{{ project.body }}</p>
+                {% for button in project.buttons %}
+                <a href="{{ button.href }}" target="_blank" class="btn btn-outline-primary mb-4">{{ button.text }}</a>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+
+        <h3 class="from-left text-center">Games</h3>
+        <div class="row from-left">
+            <div class="col-12">
+                <p>I make games as a hobby. My games are developed in JavaScript with Phaser, and I publish them online to
+                    numerous sites.
+                    I ported my latest game, <b>Melody Shuffle</b>, to mobile using Apache Cordova, and published it
+                    on
+                    the
+                    <a href="https://apps.apple.com/us/app/melody-shuffle/id1511349948" target="_blank">App
+                        Store</a> and <a href="https://play.google.com/store/apps/details?id=com.jazzdgames.melodyshuffle" target="_blank">Google
+                        Play
+                        Store</a>. My second game, <b>Rhythm Rebuild</b>, was made in 48 hours for the Kennesaw
+                    State
+                    University Global Game Jam in 2020, in which it was awarded third place.
                 </p>
             </div>
         </div>
+        <div class="row">
+            <div class="from-left col-lg-4 col-md-6 col-sm-12 text-center">
+                <a href="https://jazzdgames.itch.io/melody-shuffle" target="_blank">
+                    <img src="img/games/melodyshuffle.png" class="game">
+                    <div class="gametext">
+                        Melody Shuffle - a musical puzzle game
+                    </div>
+                </a>
+            </div>
+            <div class="from-left col-lg-4 col-md-6 col-sm-12 text-center">
+                <a href="https://jazzdgames.itch.io/rhythm-rebuild" target="_blank">
+                    <img src="img/games/rhythmrebuild.png" class="game">
+                    <div class="gametext">
+                        Rhythm Rebuild - a one button rhythm game
+                    </div>
+                </a>
+            </div>
+            <div class="from-left col-lg-4 col-md-12 col-sm-12 text-center">
+                <a href="https://jazzdgames.itch.io/foxbot" target="_blank">
+                    <img src="img/games/foxbot.png" class="game">
+                    <div class="gametext">
+                        FoxBot - a retro platformer
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="text-center w-100 from-left">
+            <br>
+            <p>Along with programming and creating sprite art, I also compose music for my games.</p>
+            <div id="bandcamp-div">
+                <iframe id="bandcamp" class="js-only" seamless>
+                    <a href="http://jazzdgames.bandcamp.com/album/foxbot-soundtrack">FoxBot Soundtrack by jazzD</a>
+                </iframe>
+                <noscript>
+                    <iframe id="bandcamp" src="https://bandcamp.com/EmbeddedPlayer/album=1095433361/size=large/bgcol=242C33/linkcol=43A3F2/tracklist=false/artwork=none/transparent=true/" seamless>
+                        <a href="http://jazzdgames.bandcamp.com/album/foxbot-soundtrack">FoxBot Soundtrack by jazzD</a>
+                    </iframe>
+                </noscript>
+            </div>
+        </div>
     </div>
 
-    <footer class="footer mt-auto py-3 darkrow">
-        <div class="container text-center" style="padding-top: 1rem; padding-bottom: 0;">
-            <p>© 2020 Jazz DeFreitas</p>
+
+    <!-- technologies -->
+    <div id="technologies" class="container text-center">
+        <h2 class="from-left pb-3">Techno&shy;logies I Use</h2>
+        <div class="row">
+            {% for skill in site.data.skills.big %}
+            <div class="col-lg-3 col-6 skill-big from-left">
+                <img src="img/skills/{{ skill | replace: '/', '' | replace: '#', 's' }}.png">
+                <p>{{ skill }}</p>
+            </div>
+            {% endfor %}
         </div>
+        <div class="row">
+            {% for skill in site.data.skills.small %}
+            <div class="col-lg-2 col-sm-4 col-6 skill-small from-left">
+                <img src="img/skills/{{ skill | replace: '/', '' | replace: '#', 's' }}.png">
+                <p>{{ skill }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+    <!-- contact -->
+    <div id="contact" class="container text-center from-left">
+        <h2>Contact</h2>
+        <p>
+            You can contact me by email at <a href="mailto:jazzdefreitas@gmail.com">jazzdefreitas<wbr>@gmail.com</a>,
+            or message my <a href="https://www.linkedin.com/in/jazzdefreitas" target="_blank">LinkedIn account</a>.
+        </p>
+    </div>
+
+    <footer class="text-center text-grey">
+        © Jazz DeFreitas
     </footer>
 
     <script src="js/jquery-3.0.0.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/matter.min.js"></script>
+    <script src="js/namedisplay.js"></script>
     <script>
-        document.getElementById('home').removeChild(document.getElementById('noscripts'));
-
-        var arrElements = document.querySelectorAll('.tohide');
-        for (var i = 0; i < arrElements.length; i++) {
-            var element = arrElements[i];
+        const fromLeftElements = document.querySelectorAll('.from-left');
+        for (var i = 0; i < fromLeftElements.length; i++) {
+            var element = fromLeftElements[i];
+            element.classList.remove('from-left');
             element.classList.add('hidden');
-            element.classList.remove('tohide');
         }
 
-        arrElements = document.querySelectorAll('.tohideaftercanvas');
-        for (var i = 0; i < arrElements.length; i++) {
-            var element = arrElements[i];
-            element.classList.add('hiddenaftercanvas');
-            element.classList.remove('tohideaftercanvas');
-        }
-
-        var offset = 30;
-        $('.nav-item a').click(function (event) {
-            event.preventDefault();
-            scrollBy(0, $($(this).attr('href'))[0].getBoundingClientRect().top - offset);
-        });
-
-        function startMatter() {
-            var canvas = document.getElementById('mattercanvas');
-
-            const position = {
-                name1: { x: -380, y: -75 },
-                name2: { x: 195, y: -75 },
-                name3: { x: 0, y: 50 },
-            };
-            const verticalPosition = {
-                name1: { x: 0, y: -150 },
-                name2: { x: 0, y: 0 },
-                name3: { x: 0, y: 125 },
-            };
-
-            var minWidth = 745;
-            var minHeight = 700;
-            var changeWidth = 1100;
-            var verticalName = false;
-            function resizeCanvas() {
-                if (canvas.offsetWidth < changeWidth && !verticalName) {
-                    verticalName = true;
-
-                    Composite.translate(name1, {
-                        x: verticalPosition.name1.x - position.name1.x,
-                        y: verticalPosition.name1.y - position.name1.y
-                    });
-                    Composite.translate(name2, {
-                        x: verticalPosition.name2.x - position.name2.x,
-                        y: verticalPosition.name2.y - position.name2.y
-                    });
-                    Body.translate(name3, {
-                        x: verticalPosition.name3.x - position.name3.x,
-                        y: verticalPosition.name3.y - position.name3.y
-                    });
-                } else if (canvas.offsetWidth > changeWidth && verticalName) {
-                    verticalName = false;
-
-                    Composite.translate(name1, {
-                        x: position.name1.x - verticalPosition.name1.x,
-                        y: position.name1.y - verticalPosition.name1.y
-                    });
-                    Composite.translate(name2, {
-                        x: position.name2.x - verticalPosition.name2.x,
-                        y: position.name2.y - verticalPosition.name2.y
-                    });
-                    Body.translate(name3, {
-                        x: position.name3.x - verticalPosition.name3.x,
-                        y: position.name3.y - verticalPosition.name3.y
-                    });
-                }
-                var aspectRatio = canvas.offsetWidth / canvas.offsetHeight;
-
-                if (canvas.offsetWidth > minWidth && canvas.offsetHeight > minHeight) {
-                    canvas.width = canvas.offsetWidth;
-                    canvas.height = canvas.offsetHeight;
-                } else if (canvas.offsetWidth < minWidth && canvas.offsetHeight > minHeight) {
-                    canvas.width = minWidth;
-                    canvas.height = minWidth / aspectRatio;
-                } else if (canvas.offsetHeight < minHeight && canvas.offsetWidth > minWidth) {
-                    canvas.height = minHeight;
-                    canvas.width = minHeight * aspectRatio;
-                } else {
-                    if (canvas.offsetWidth - minWidth > canvas.offsetHeight - minHeight) {
-                        canvas.height = minHeight;
-                        canvas.width = minHeight * aspectRatio;
-                    } else {
-                        canvas.width = minWidth;
-                        canvas.height = minWidth / aspectRatio;
-                    }
-                }
-
-                render.options.width = canvas.width;
-                render.options.height = canvas.height;
-
-                render.bounds.min.x = -canvas.width / 2;
-                render.bounds.max.x = canvas.width / 2;
-                // render.bounds.min.y = -canvas.height / 2;
-                // render.bounds.max.y = canvas.height / 2;
-                var relativeNavbarSize = 60 * Math.max(canvas.height / canvas.offsetHeight, 1);
-                render.bounds.min.y = (-canvas.height - relativeNavbarSize) / 2;
-                render.bounds.max.y = (canvas.height - relativeNavbarSize) / 2;
-
-                var arrElements = document.querySelectorAll('.linkBtn');
-                for (var i = 0; i < arrElements.length; i++) {
-                    btn = arrElements[i];
-                    var pos = verticalName ? verticalPosition.name3.y : position.name3.y;
-                    var y = (canvas.height / 2 + pos + 80) / Math.max(canvas.height / canvas.offsetHeight, 1) + 20 * Math.max(canvas.height / canvas.offsetHeight, 1);
-                    y = Math.min(y, canvas.offsetHeight * .9);
-                    btn.style.top = y + 'px'
-                }
-
-            }
-
-            window.addEventListener('resize', resizeCanvas);
-
-            var Engine = Matter.Engine,
-                Render = Matter.Render,
-                Runner = Matter.Runner,
-                Events = Matter.Events,
-                Composite = Matter.Composite,
-                Composites = Matter.Composites,
-                Common = Matter.Common,
-                MouseConstraint = Matter.MouseConstraint,
-                Mouse = Matter.Mouse,
-                World = Matter.World,
-                Vector = Matter.Vector,
-                Bounds = Matter.Bounds,
-                Bodies = Matter.Bodies,
-                Body = Matter.Body,
-                Sleeping = Matter.Sleeping;
-
-
-            // create an engine
-            var engine = Engine.create({
-                enableSleeping: true
-            });
-
-            // create a renderer
-            var render = Render.create({
-                canvas: canvas,
-                engine: engine,
-                options: {
-                    width: canvas.width,
-                    height: canvas.height,
-                    hasBounds: true,
-                    wireframes: false,
-                    showSleeping: false,
-                    background: 'transparent'
-                    // showDebug: false,
-                    // showBroadphase: false,
-                    // showVelocity: false,
-                    // showCollisions: true,
-                    // showSeparations: false,
-                    // showAxes: false,
-                    // showPositions: false,
-                    // showAngleIndicator: true,
-                    // showIds: false,
-                    // showShadows: false,
-                    // showVertexNumbers: false,
-                    // showConvexHulls: false,
-                    // showInternalEdges: false,
-                    // showMousePosition: false
-                }
-            });
-
-
-            // // add mouse control
-            // var mouse = Mouse.create(render.canvas),
-            //     mouseConstraint = MouseConstraint.create(engine, {
-            //         mouse: mouse,
-            //         constraint: {
-            //             stiffness: .2,
-            //             render: {
-            //                 visible: false
-            //             }
-            //         }
-            //     });
-
-            // World.add(engine.world, mouseConstraint);
-            // render.mouse = mouse;
-
-            var collisionRender = { visible: false };
-            var name1 = Composite.create({
-                bodies: [
-                    Bodies.rectangle(position.name1.x, position.name1.y, 01, 1, {
-                        render: { sprite: { texture: 'img/name1.png' } },
-                        isStatic: true,
-                    }),
-                    Body.create({
-                        parts: [
-                            Bodies.rectangle(position.name1.x - 125, position.name1.y + 37, 69, 38),
-                            Bodies.rectangle(position.name1.x - 98, position.name1.y - 6, 12, 100),
-                        ],
-                        isStatic: true,
-                        render: collisionRender
-                    }),
-                    Bodies.circle(position.name1.x - 37, position.name1.y + 16, 40, { isStatic: true, render: collisionRender }),
-                    Bodies.rectangle(position.name1.x + 50, position.name1.y + 16, 61, 78, { isStatic: true, render: collisionRender }),
-                    Bodies.rectangle(position.name1.x + 130, position.name1.y + 16, 61, 78, { isStatic: true, render: collisionRender }),
-                ]
-            });
-            var name2 = Composite.create({
-                bodies: [
-                    Bodies.rectangle(position.name2.x, position.name2.y, 1, 1, {
-                        render: { sprite: { texture: 'img/name2.png' } },
-                        isStatic: true,
-                    }),
-                    Body.create({
-                        parts: [
-                            Bodies.rectangle(position.name2.x - 330, position.name2.y, 30, 115),
-                            Bodies.circle(position.name2.x - 303, position.name2.y - 12, 43)
-                        ],
-                        isStatic: true,
-                        render: collisionRender
-                    }),
-                    Bodies.circle(position.name2.x - 203, position.name2.y + 15, 39, { isStatic: true, render: collisionRender }),
-                    Bodies.rectangle(position.name2.x - 111, position.name2.y, 75, 113, { isStatic: true, render: collisionRender }),
-                    Bodies.rectangle(position.name2.x - 33, position.name2.y + 16, 46, 78, { isStatic: true, render: collisionRender }),
-                    Bodies.circle(position.name2.x + 35, position.name2.y + 15, 39, { isStatic: true, render: collisionRender }),
-                    Bodies.rectangle(position.name2.x + 98, position.name2.y + 2, 13, 110, { isStatic: true, render: collisionRender }),
-                    Body.create({
-                        parts: [
-                            Bodies.rectangle(position.name2.x + 145, position.name2.y + 18, 46, 76),
-                            Bodies.rectangle(position.name2.x + 141, position.name2.y - 28, 12, 40)
-                        ],
-                        isStatic: true,
-                        render: collisionRender
-                    }),
-                    Bodies.circle(position.name2.x + 225, position.name2.y + 16, 40, { isStatic: true, render: collisionRender }),
-                    Bodies.circle(position.name2.x + 313, position.name2.y + 13, 38, { isStatic: true, render: collisionRender }),
-                ]
-            });
-            var name3 = Bodies.rectangle(position.name3.x, position.name3.y, 726, 50, {
-                isStatic: true,
-                render: { sprite: { texture: 'img/name3.png' } }
-            });
-
-            var particles = [];
-            setInterval(function () {
-                if (!document.hidden) {
-                    var iconNum = Math.floor(Math.random() * 20);
-                    var particle = Bodies.circle(canvas.width * Math.random() - (canvas.width / 2), -(canvas.height * .6), 50, {
-                        restitution: 1,
-                        sleepThreshold: 10,
-                        render: { sprite: { texture: 'img/icons/' + iconNum + '.png' } }
-                    });
-                    particle.jumps = 0;
-                    particles.push(particle);
-                    Events.on(particle, 'sleepStart', function (event) {
-                        particle.jumps++;
-                        Sleeping.set(particle, false)
-                        Body.applyForce(particle, particle.position, {
-                            x: Math.random() - .5,
-                            y: -.5,
-                        });
-                    });
-                    World.add(engine.world, particle);
-                }
-            }, 500);
-
-            var canvasStarted = false;
-            Events.on(engine, 'beforeUpdate', function (event) {
-                if (!canvasStarted) {
-                    canvasStarted = true;
-                    var hiddenAfter = document.querySelectorAll('.hiddenaftercanvas');
-                    for (var i = 0; i < hiddenAfter.length; i++) {
-                        var element = hiddenAfter[i];
-                        element.classList.add('fade-in-element');
-                        element.classList.remove('hiddenaftercanvas');
-                    }
-                }
-                for (var i = 0; i < particles.length; i++) {
-                    if (particles[i].position.y > canvas.height * .6 || particles[i].jumps > 5) {
-                        World.remove(engine.world, particles.splice(i, 1)[0]);
-                        i--;
-                    }
-                }
-            });
-
-            resizeCanvas();
-
-            World.add(engine.world, [name1, name2, name3]);
-
-            Engine.run(engine);
-            Render.run(render);
-
-        }
-
-        var elements;
-        var windowHeight;
-        function init() {
-            elements = document.querySelectorAll('.hidden');
-            windowHeight = window.innerHeight;
-            windowWidth = window.innerWidth;
-        }
-        function checkPosition() {
-            for (var i = 0; i < elements.length; i++) {
-                var element = elements[i];
-                var positionFromTop = elements[i].getBoundingClientRect().top;
-
-                if (positionFromTop - windowHeight < -100) {
-                    element.classList.add('fade-in-element');
+        function checkScroll() {
+            var sameIndex = 0;
+            for (var i = 0; i < fromLeftElements.length; i++) {
+                var element = fromLeftElements[i];
+                var top = element.getBoundingClientRect().top;
+                if (top - window.innerHeight < -100 && element.classList.contains('hidden')) {
+                    element.style.opacity = '0';
+                    element.style.animationDelay = (sameIndex * 50) + 'ms';
                     element.classList.remove('hidden');
+                    element.classList.add('from-left');
+                    if (top > 0)
+                        sameIndex++;
                 }
             }
         }
 
-        window.addEventListener('scroll', checkPosition);
-        window.addEventListener('resize', init);
-
-        init();
-        checkPosition();
+        window.addEventListener('scroll', checkScroll);
+        checkScroll();
 
         $(window).bind("load", function () {
             setTimeout(function () {
-                console.log('arrt')
-                $('#bandcamp').attr('src', 'https://bandcamp.com/EmbeddedPlayer/album=1095433361/size=large/bgcol=242C33/linkcol=56EF6F/tracklist=false/artwork=none/transparent=true/');
+                $('#bandcamp').attr('src', 'https://bandcamp.com/EmbeddedPlayer/album=1095433361/size=large/bgcol=242C33/linkcol=43A3F2/tracklist=false/artwork=none/transparent=true/');
             }, 100);
+        });
+
+        $(document).ready(function () {
+            startMatter();
         });
     </script>
 </body>
